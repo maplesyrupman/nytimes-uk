@@ -1,60 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Domine&family=Grenze+Gotisch&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome CSS Icons (For cool glyphicons) -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-
-    <link rel="stylesheet" href="./starter/styling/style.css">
-    
-    <title>Document</title>
+    <title>NYTimes Search</title>
 </head>
+
 <body>
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid header">
         <div class="container">
-          <h1 class="display-4">New York Times</h1>
-          <p class="lead"></p>
+            <h1 class="display-4"><i class="fa-regular fa-newspaper"></i> </i> New York Times Search</h1>
+            <p class="lead"></p>
         </div>
-      </div>
-    
-      <div><h3>Search Parameters</h3></div>
+    </div>
 
-    <form>
-        <div class="form-group">
-          <label for="searchTerm">Search Term</label>
-          <input type="text" class="form-control" id="searchTerm" placeholder="enter search">
-        </div>
-        <div class="form-group">
-          <label for="numberOfRecords">Number of records to retrieve</label>
-          <select class="form-control" id="numberOfRecords">
-            <option>5</option>
-            <option>10</option>
-            <option>15</option>
-            <option>20</option>
-            <option>25</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="StartYear">Start Year (Optional)</label>
-          <input id="StartYear" name="StartYear" type="date" class="form-control" id="basic-url" aria-describedby="basic-addon3"/>
-        </div>
-        <div class="form-group">
-            <label for="EndYear">End Year (Optional)</label>
-            <input id="EndYear" name="EndYear" type="date" class="form-control" id="basic-url" aria-describedby="basic-addon3"/>
-        </div>
-        <button id="search" type="submit" class="btn btn-primary btn-sm">Search</button>
-        <button id="clearResults" type="button" class="btn btn-primary btn-sm">Clear Results</button>    
-    </form>
+        <div class="form-container">
+        <form>
+            <h2 class="area-header"><i class="fa-solid fa-box-archive"></i> Search Parameters</h2>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="searchTerm">Search Terms</label>
+                    <input type="text" class="form-control" id="searchTerm" placeholder="enter search">
+                </div>
+                <div class="form-group">
+                    <label for="numberRecords">Number of Records to Retrieve</label>
+                    <select class="form-control" id="numberRecords">
+                        <option>5</option>
+                        <option>10</option>
+                        <option>20</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="startYear">Start Year (Optional)</label>
+                    <input type="number" name="startYear" id="startYear" class="form-control">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="endYear">End Year (Optional)</label>
+                    <input type="number" name="endYear" id="endYear" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary button" id="search">
+                    <i class="fa-solid fa-magnifying-glass"></i> Search
+                </button>
+                <button type="button" class="btn btn-primary button" id="clearResults"><i class="fa-solid fa-broom"></i></i> Clear</button>
+        </form>
+    </div>
 
-    <div id="topArticles">Top Articles</div>
+    <br>
+    <br>
+    <div>
+        <div class="area-header">
+            <i class="fa fa-table"></i> Top Articles</h2>
+            <div id="searchResults">
+                <div class="results" id="article-section">
+                </div>
 
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-    <script src="./starter/styling/script.js"></script>
+            </div>
+        </div>
+
+        <script src="https://kit.fontawesome.com/7f762584e1.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+        <script src="script.js"></script>
 </body>
+
 </html>

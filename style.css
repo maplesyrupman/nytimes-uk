@@ -1,0 +1,46 @@
+.header {
+    background-color: navy;
+    color: white;
+    font-family: 'Grenze Gotisch', cursive;
+    text-align: center;
+}
+
+.form-group {
+    font-family: 'Didact Gothic', sans-serif;
+    padding: 10px;
+}
+
+.area-header {
+    font-family: 'Domine', serif;
+    font-size: 30px;
+}
+
+.form-header {
+    color: #555;
+    text-align: center;
+    padding: 10px;
+}
+
+.form-container {
+    padding: 20px;
+    background-color: #f2f2f2;
+    justify-self: center;
+    padding: 80px;
+}
+
+input[type=number], input[type=text], .form-control {
+    border: 1px solid darkblue;
+}
+
+.button {
+    background-color: transparent;
+    color: currentColor;
+    border: 2px solid;
+    border-color: darkblue;
+    font-family: 'Didact Gothic', sans-serif; 
+}
+
+.button:hover {
+    color: darkblue;
+}
+
